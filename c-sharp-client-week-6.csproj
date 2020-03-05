@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>c_sharp_client_week_6</RootNamespace>
+    <RootNamespace>CretaceousClient</RootNamespace>
   </PropertyGroup>
 
 

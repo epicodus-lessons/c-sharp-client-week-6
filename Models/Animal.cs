@@ -14,11 +14,11 @@ namespace CretaceousClient.Models
 
     public static List<Animal> GetAnimals()
     {
-      var apiCallTask = ApiHelper.ApiCall();
+      var apiCallTask = ApiHelper.GetAll();
       var result = apiCallTask.Result;
 
-      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      List<Animal> animalList = JsonConvert.DeserializeObject<List<Animal>>(jsonResponse["results"].ToString());
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Animal> animalList = JsonConvert.DeserializeObject<List<Animal>>(jsonResponse.ToString());
 
       return animalList;
     }

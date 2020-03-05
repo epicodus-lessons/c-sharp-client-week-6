@@ -1,6 +1,6 @@
 using System;
 
-namespace c_sharp_client_week_6.Models
+namespace CretaceousClient.Models
 {
     public class ErrorViewModel
     {

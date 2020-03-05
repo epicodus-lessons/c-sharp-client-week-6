@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace c_sharp_client_week_6
+namespace CretaceousClient
 {
     public class Program
     {
