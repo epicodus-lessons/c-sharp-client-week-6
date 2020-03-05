@@ -29,13 +29,24 @@ namespace CretaceousClient.Controllers
       return View(animal);
     }
 
+    public IActionResult Edit(int id)
+    {
+      var animal = Animal.GetDetails(id);
+      return View(animal);
+    }
+
     [HttpPost]
     public IActionResult Details(int id, Animal animal)
     {
       animal.AnimalId = id;
       Animal.Put(animal);
-      var newAnimal = Animal.GetDetails(animal.AnimalId);
-      return View(newAnimal);
+      return RedirectToAction("Details", id);
+    }
+
+    public IActionResult Delete(int id)
+    {
+      Animal.Delete(id);
+      return RedirectToAction("Index");
     }
   }
 }
