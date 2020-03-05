@@ -28,7 +28,7 @@ namespace CretaceousClient.Models
       var apiCallTask = ApiHelper.Get(id);
       var result = apiCallTask.Result;
 
-      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       Animal animal = JsonConvert.DeserializeObject<Animal>(jsonResponse.ToString());
 
       return animal;
